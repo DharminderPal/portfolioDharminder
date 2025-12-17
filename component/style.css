@@ -1,0 +1,75 @@
+/* Navbar base with glass effect */
+.custom-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 18px 0;
+  transition: all 0.4s ease;
+  position: fixed; /* or sticky */
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Logo */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  transition: transform 0.4s ease;
+  color: #333;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Nav links */
+.nav-anim {
+  position: relative;
+  margin-left: 24px;
+  font-weight: 500;
+  color: #333 !important;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.nav-anim::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #333;
+  transition: width 0.4s ease;
+}
+
+.nav-anim:hover::after {
+  width: 100%;
+}
+
+.nav-anim:hover {
+  color: #666 !important;
+}
+
+/* Navbar load animation */
+.custom-nav {
+  animation: slideDown 0.8s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Make sure content doesn't hide under fixed navbar */
+body {
+  padding-top: 70px; /* Adjust based on navbar height */
+}

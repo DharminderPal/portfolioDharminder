@@ -1,4 +1,5 @@
 import { StrictMode } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { createRoot } from 'react-dom/client'
 import { Router, Routes,BrowserRouter,Route } from "react-router"
 import './index.css'

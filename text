@@ -1,0 +1,61 @@
+
+/* Profile section */
+.profile-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Background image */
+.profile-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.profile-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark overlay on image */
+.profile-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Content */
+.profile-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    z-index: 2;
+    color: rgb(250, 246, 246);
+    max-width: 600px;
+}
+
+.profile-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+.profile-content p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+ 

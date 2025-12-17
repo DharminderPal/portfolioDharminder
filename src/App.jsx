@@ -1,27 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { useNavigate } from 'react-router'
-function App() {
+import { useNavigate } from 'react-router-dom'
+import Navbar from '../component/Navbar'
+import Profile from '../Profile/Profile'
 
-
-
-const onclick =()=>{
-  useNavigate("/about");
-}
-
+const App= ()=>{
   return(
 <div>
-
-
+<Navbar/>
+<Profile/>
 </div>
-
 
   )
 }
 
 
 export default App
+
 
 
