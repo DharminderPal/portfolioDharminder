@@ -1,75 +1,199 @@
-/* Navbar base with glass effect */
+.App {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App-header {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #646cff;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 1rem 0;
+}
+
+.card {
+  padding: 2em;
+  margin-top: 2rem;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+code {
+  background-color: #1a1a1a;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Liquid Glass Style Blur Navbar */
 .custom-nav {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 18px 0;
-  transition: all 0.4s ease;
-  position: fixed; /* or sticky */
-  width: 100%;
+  position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  overflow: hidden;
+  padding: 1rem 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  isolation: isolate;
 }
 
-/* Logo */
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  transition: transform 0.4s ease;
-  color: #333;
+/* Liquid Glass Effect Layer - Backdrop Blur */
+.custom-nav::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  overflow: hidden;
 }
 
-.logo:hover {
-  transform: scale(1.1);
+/* Liquid Glass Tint Layer */
+.custom-nav::after {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
+    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
-/* Nav links */
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .custom-nav {
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .custom-nav::after {
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.1),
+      inset -1px -1px 1px 1px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.custom-nav .container {
+  position: relative;
+  z-index: 3;
+}
+
+.navbar-brand.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #213547;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 3;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar-brand.logo {
+    color: rgba(255, 255, 255, 0.87);
+  }
+}
+
+.navbar-brand.logo:hover {
+  color: #646cff;
+}
+
+.navbar-nav {
+  position: relative;
+  z-index: 3;
+}
+
+.navbar-nav .nav-link {
+  color: #213547;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 3;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.87);
+  }
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #646cff;
+}
+
 .nav-anim {
   position: relative;
-  margin-left: 24px;
-  font-weight: 500;
-  color: #333 !important;
-  transition: color 0.3s ease;
 }
 
-/* Underline animation */
 .nav-anim::after {
-  content: "";
+  content: '';
   position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
+  width: 0;
   height: 2px;
-  background: #333;
-  transition: width 0.4s ease;
+  bottom: 0;
+  left: 50%;
+  background-color: #646cff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .nav-anim:hover::after {
-  width: 100%;
+  width: 80%;
 }
 
-.nav-anim:hover {
-  color: #666 !important;
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  z-index: 3;
 }
 
-/* Navbar load animation */
-.custom-nav {
-  animation: slideDown 0.8s ease forwards;
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 53, 71, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.87%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Make sure content doesn't hide under fixed navbar */
-body {
-  padding-top: 70px; /* Adjust based on navbar height */
 }

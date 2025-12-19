@@ -1,0 +1,42 @@
+.stack {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  position: relative;
+  font-size: 40px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background: #000;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* POP on hover */
+.icon:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Colors */
+.mongo { color: green; }
+.react { color: skyblue; }
+.node { color: #ffff66; }

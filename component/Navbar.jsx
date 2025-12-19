@@ -21,7 +21,7 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            {["Home", "About", "Projects", "Blog", "Contact"].map((item) => (
+            {["Home", "Skill", "Projects", "Experience", "About"].map((item) => (
               <li className="nav-item" key={item}>
                 <a className="nav-link nav-anim" href="#">
                   {item}
