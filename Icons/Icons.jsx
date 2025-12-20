@@ -7,25 +7,6 @@ import './styles.css'
 function Question() {
   return (
     <div>
-   
-{/* <div    className="icon"  style={{display:"flex",gap: "15px" }}>
-
-   <div  style={{fontSize: "40px",  color:"green" , }}>
-        <DiMongodb title="MongoDB" />
-      </div>
-      <div style={{fontSize: "40px"  }}>
-        <SiExpress title="Express.js" />
-
-      </div>
-        <div style={{fontSize: "40px",   color:"skyblue"}}>
-        <DiReact title="React" />
-
-        </div>
-        <div style={{fontSize: "40px", color:"#ffff66" }}>
-
-        <DiNodejsSmall title="Node.js" />
-        </div>
-    </div> */}
   <div className="stack">
       <div className="icon mongo">
         <DiMongodb />
@@ -47,14 +28,6 @@ function Question() {
         <span className="tooltip">Node.js</span>
       </div>
     </div>
-
-
-
-
-
-
-
-
 </div>
 
   );

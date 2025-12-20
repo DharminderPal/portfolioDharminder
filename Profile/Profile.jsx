@@ -3,7 +3,7 @@ import './style.css'
 import image from '../image/3.jpg'
 import Icons from '../Icons/Icons'
 import Kill from "../kills/Kill";
-import Experience from "../Experience/Experienc";
+import Project from '../Project/Project'
 const Profile = () => {
     return (
         <>
@@ -25,8 +25,8 @@ const Profile = () => {
 
                 <div>
 
-                    <Kill/>
-
+                    <Kill />
+                    <Project />
 
                 </div>
 
