@@ -1,4 +1,120 @@
-.project{
-border: 5px solid red;
-height: 100%;
+/* Section spacing */
+.Project {
+  padding: 80px 40px;
 }
+
+/* 🔥 GLASS BACKGROUND */
+.glass-bg {
+  padding: 40px;
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.45);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Liquid light reflection */
+.glass-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2),
+    transparent 60%
+  );
+
+  pointer-events: none;
+}
+
+/* Cards layout */
+.card-row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+.project-card {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.project-card .ant-card-body {
+  background: transparent;
+  color: #fff;
+}
+
+.project-card .ant-card-meta-title {
+  color: #fff;
+}
+
+.project-card .ant-card-meta-description {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+
+
+.project-card {
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+.project-card {
+  background: rgba(255, 255, 255, 0.12) !important; /* transparent */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35);
+
+  transition: all 0.3s ease;
+}
+
+/* hover effect */
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+
+
+.project-card .ant-card-body {
+  background: transparent;
+  color: #fff;
+}
+
+.project-card .ant-card-meta-title {
+  color: #fff;
+}
+
+.project-card .ant-card-meta-description {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+

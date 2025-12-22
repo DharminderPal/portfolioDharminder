@@ -1,15 +1,90 @@
 import React from "react";
+
 import './style.css'
+import { Card, Flex } from 'antd';
+import Image from '../image/4.png';
+import { Meta } from "antd/es/list/Item";
 const Project =()=>{
 
-    return(
-        <div  id="projects" className="Project">
-            <section >
-            <h1>Hi am your Project div </h1>
-            <p style={{color:"white"}}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum consequuntur doloribus atque, doloremque nobis ratione aspernatur eius soluta, velit itaque repudiandae aut commodi rerum, ipsum consectetur. Ratione error vel et sint nostrum! Voluptatem magni at porro nulla corrupti consequuntur impedit, nesciunt esse ab provident maxime maiores! Saepe, hic dolore enim, maiores voluptates animi adipisci perspiciatis a eum molestias earum fugiat amet quae excepturi impedit eveniet blanditiis delectus autem nisi tempora accusantium? Perferendis  <br /> mollitia nulla deleniti illo molestias labore rem modi commodi eveniet sit. Quae amet dolor alias at ad obcaecati veniam ipsum odit facilis ab id ipsam, ea nemo asperiores omnis vero officia nostrum cupiditate dicta dolorem similique quod quos aut dignissimos. Consequatur atque quos exercitationem odit, quo sit eligendi debitis alias recusandae accusamus unde aut repellendus officiis laudantium voluptatibus non, eum corrupti minima? Molestiae dolorum fugit id dolore quos temporibus eveniet itaque architecto maxime reiciendis dolorem ex, reprehenderit quisquam tempore voluptatum voluptatibus harum, explicabo sapiente cupiditate et molestias laboriosam minus unde. Nostrum nemo labore commodi, praesentium natus molestiae explicabo inventore laborum, numquam consequatur neque officia culpa iste harum tempora consectetur consequuntur reprehenderit ab sed sunt est fugiat vitae recusandae eligendi! Officia sint ex, dicta iure consectetur suscipit veniam animi neque unde, a cupiditate praesentium nam distinctio? Aliquam minus consequuntur iure sapiente explicabo recusandae in veniam, praesentium, ducimus ut voluptate reprehenderit aut qui officiis. Saepe repudiandae ea quo distinctio earum sint quae iusto dolorum, fugiat nostrum necessitatibus adipisci inventore similique sunt blanditiis explicabo facere. Ex repudiandae obcaecati dolorem culpa facilis quaerat aspernatur vero laudantium accusamus in eaque iste unde praesentium aperiam facere saepe enim dolore, dolores delectus atque porro. Expedita, nostrum. Debitis rem libero autem beatae amet consectetur reprehenderit adipisci fugiat itaque? Ut, architecto! Amet voluptatem perferendis quaerat nobis ullam rem at beatae, dolorem alias deleniti aspernatur? Veniam unde beatae voluptas aut, similique ab, repellat, non cupiditate doloremque eius quod itaque earum vitae facilis ducimus modi officia exercitationem? Enim veniam repellat consequatur molestiae quaerat natus quia corrupti odit quis, fuga eius! Minus nemo voluptatem eos impedit tenetur obcaecati aspernatur eius porro rem, optio illum aliquam molestiae maxime, vel asperiores laboriosam culpa. Quis, nesciunt eos! Eius, necessitatibus possimus. Facere veniam possimus perspiciatis veritatis quisquam id rem unde itaque, voluptatum at aliquam ullam sint autem vitae sunt harum architecto atque? Voluptas dicta neque sint numquam quidem deleniti quam nulla? Non voluptates maxime laudantium quo recusandae beatae ea soluta, suscipit voluptatum explicabo animi temporibus ad corporis magni aut, blanditiis exercitationem impedit quae neque doloremque deleniti! Iure officiis ipsa culpa necessitatibus corrupti, molestiae animi officia eligendi, laboriosam minima, maiores natus mollitia. Culpa voluptatum ipsum animi harum voluptates quas tenetur a adipisci tempore nulla, consequatur voluptatem, porro nam. Inventore sequi quia exercitationem obcaecati esse molestiae voluptates autem totam ipsa, error ipsum aliquid mollitia dolores unde harum minima velit dolorem nemo facere. Quo sunt consequuntur aspernatur itaque id officia expedita suscipit accusantium, debitis cumque voluptas eligendi odit quibusdam. Ea dolorum natus provident, soluta <br />veniam asperiores voluptas, iusto perspiciatis temporibus rem accusamus. Molestiae aspernatur odio totam eos.</p>
-            </section>
 
-        </div>
+const joke =()=>{
+  window.open("https://github.com/DharminderPal");
+}
+
+
+    return(
+
+
+
+//         <div  id="projects" className="Project">
+
+//             <section >
+//             <h1>Personal  Projects  </h1>
+//             </section>
+// <div   style={{ display: "flex", gap: "20px",justifyContent:"space-around" }}>
+  
+//   <Card
+//   className="project-card"
+//     hoverable
+//     style={{    width: 300}}
+//    onClick={joke}   cover={<img alt="img" src={Image} />}
+//   >
+//     <Meta title="Project 1" description="Description here" />
+//   </Card>
+
+//   <Card   className="project-card"
+//     hoverable
+//     style={{ width: 300 }}
+//     cover={<img alt="img" src={Image} />}
+//   >
+//     <Meta title="Project 2" description="Description here" />
+//   </Card>
+
+//   <Card   className="project-card"
+//     hoverable
+//     style={{ width: 300 }}
+//     cover={<img alt="img" src={Image} />}
+//   >
+//     <Meta title="Project 3" description="Description here" />
+//   </Card>
+
+// </div>
+// </div>
+
+<div id="projects" className="Project">
+
+  <section>
+    <h1>Personal Projects</h1>
+  </section>
+
+  {/* GLASS BACKGROUND DIV */}
+  <div className="glass-bg">
+    <div className="card-row">
+      <Card
+        className="project-card"
+        hoverable
+        style={{ width: 300 }}
+        onClick={joke}
+        cover={<img alt="img" src={Image} />}
+      >
+        <Meta title="Gemini Chat BOT "  description=""/>
+      </Card>
+
+      <Card className="project-card"          hoverable style={{ width: 300 }} cover={<img alt="img" src='../image/8.jpg' />}>
+        <Meta title="Finance-Tracker"  description="dfaafasfdfdsafjgsdfjgdf dsfjfads
+        dfdfgdsgfjhsdafghdgs fdsjfg fghdsgfkdsgkfskfkwhfkuwefbk" />
+      </Card>
+
+      <Card className="project-card" hoverable style={{ width: 300 }} cover={<img alt="img" src={Image} />}>
+        <Meta title="Project 3" description="Description here" />
+      </Card>
+    </div>
+  </div>
+
+</div>
+
+
+
     )
 }
 
