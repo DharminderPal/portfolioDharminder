@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import { DiMongodb, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiFirebase } from "react-icons/di";
-import { SiJavascript, SiNpm, SiCplusplus,SiFirebase } from "react-icons/si";
+import { SiJavascript, SiNpm, SiCplusplus,SiFirebase  } from "react-icons/si";
 
 import image from "../image/1.png";
 

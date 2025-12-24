@@ -1,6 +1,6 @@
 import React from "react";
 import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
-import { DiMongodb, DiReact, DiNodejsSmall } from "react-icons/di";
+import { DiMongodb, DiReact, DiNodejsSmall  } from "react-icons/di";
 import { SiExpress } from "react-icons/si";
 import './styles.css'
 
@@ -8,6 +8,7 @@ function Question() {
   return (
     <div>
   <div className="stack">
+
       <div className="icon mongo">
         <DiMongodb />
         <span className="tooltip">MongoDB</span>
@@ -27,6 +28,7 @@ function Question() {
         <DiNodejsSmall />
         <span className="tooltip">Node.js</span>
       </div>
+
     </div>
 </div>
 

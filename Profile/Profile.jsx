@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css'
-import image from '../image/3.jpg'
+import image from '../image/11.jpeg'
 import Icons from '../Icons/Icons'
 import Kill from "../kills/Kill";
 import About from '../About/Contact'
@@ -8,9 +8,10 @@ import Project from '../Project/Project'
 const Profile = () => {
     return (
         <>
-            <section className="profile-section">
+            <section className="profile-section">   
                 <div className="profile-bg">
                     <img src={image} alt="Background" />
+                    {/* <video src={image}></video>  */}
                 </div>
 
                 <div className="profile-content">
